@@ -6,7 +6,7 @@
 /*   By: ksudyn <ksudyn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 20:15:05 by ksudyn            #+#    #+#             */
-/*   Updated: 2025/09/17 19:05:35 by ksudyn           ###   ########.fr       */
+/*   Updated: 2026/01/05 16:01:32 by ksudyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,15 +46,12 @@ int main(int argc, char **argv)
         case DEBUG:
             std::cout << "[ DEBUG ]" << std::endl;
             harl.complain("DEBUG");
-            [[fallthrough]];// mostrar todos los siguientes niveles
         case INFO:
             std::cout << "[ INFO ]" << std::endl;
             harl.complain("INFO");
-            [[fallthrough]];
         case WARNING:
             std::cout << "[ WARNING ]" << std::endl;
             harl.complain("WARNING");
-            [[fallthrough]];
         case ERROR:
             std::cout << "[ ERROR ]" << std::endl;
             harl.complain("ERROR");

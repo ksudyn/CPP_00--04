@@ -6,7 +6,7 @@
 /*   By: ksudyn <ksudyn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/09 19:31:44 by ksudyn            #+#    #+#             */
-/*   Updated: 2025/09/30 15:03:50 by ksudyn           ###   ########.fr       */
+/*   Updated: 2026/01/05 15:42:22 by ksudyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,7 +109,7 @@ void Contact:: print_contact(int i)
 //funciona como un itoa mas flexible
 //pero funciona con cualquier tipo de datos, no solo enteros.
 
-int	Contact:: dat_contact(int *num_contact)
+int	Contact:: dat_contact(size_t *num_contact)
 {
 	std::string	input[5];
 	std::string	types[5];

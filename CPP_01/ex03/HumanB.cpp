@@ -6,13 +6,13 @@
 /*   By: ksudyn <ksudyn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/12 20:12:07 by ksudyn            #+#    #+#             */
-/*   Updated: 2025/09/16 16:10:36 by ksudyn           ###   ########.fr       */
+/*   Updated: 2026/01/05 15:51:38 by ksudyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 
-HumanB::HumanB(std::string name): name(name), weapon(nullptr)
+HumanB::HumanB(std::string name): name(name), weapon(NULL)
 {
     std::cout << name << " HumanB Constructor" << std::endl;
 }

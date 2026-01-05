@@ -6,26 +6,34 @@
 /*   By: ksudyn <ksudyn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 19:09:08 by ksudyn            #+#    #+#             */
-/*   Updated: 2025/09/12 18:55:57 by ksudyn           ###   ########.fr       */
+/*   Updated: 2026/01/05 15:47:16 by ksudyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie*	zombieHorde( int N, std::string name )
+#include <sstream>
+
+Zombie* zombieHorde(int N, std::string name)
 {
-    if(N <= 0)
-        return (NULL);
-    
-    Zombie *New_Zombie = new Zombie[N];
-    for(int i = 0; i < N; i++)
+    if (N <= 0)
+        return NULL;
+
+    Zombie* New_Zombie = new Zombie[N];
+
+    for (int i = 0; i < N; i++)
     {
-        New_Zombie[i].put_name(name + std::to_string(i + 1));
+        std::stringstream ss;
+        ss << (i + 1);
+
+        New_Zombie[i].put_name(name + ss.str());
         New_Zombie[i].announce();
-        std::cout  << "\n";
+        std::cout << "\n";
     }
-    return(New_Zombie);
+
+    return New_Zombie;
 }
+
 
 // Estás reservando memoria para un array de N objetos Zombie en el heap.
 // Cada elemento del array es un Zombie independiente.

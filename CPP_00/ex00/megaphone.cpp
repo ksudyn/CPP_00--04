@@ -6,12 +6,13 @@
 /*   By: ksudyn <ksudyn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/09 18:51:36 by ksudyn            #+#    #+#             */
-/*   Updated: 2025/07/11 15:58:42 by ksudyn           ###   ########.fr       */
+/*   Updated: 2026/01/05 15:34:09 by ksudyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "string.h"
 #include "iostream"
+#include <cctype>
 
 int main(int argc, char **argv)
 {
@@ -28,7 +29,7 @@ int main(int argc, char **argv)
             len = strlen(argv[i]);
             while(j <= len)
             {
-                toupper(argv[i][j]);
+                argv[i][j] = std::toupper(static_cast<unsigned char>(argv[i][j]));
                 j++;
             }
             std::cout << argv[i];

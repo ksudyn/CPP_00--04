@@ -6,7 +6,7 @@
 /*   By: ksudyn <ksudyn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/09 19:32:09 by ksudyn            #+#    #+#             */
-/*   Updated: 2025/09/10 17:02:14 by ksudyn           ###   ########.fr       */
+/*   Updated: 2026/01/05 15:40:14 by ksudyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ int PhoneBook::check_command(std::string input)
 		index_new >> number;
 
 		// Valida el índice (entre 1 y 8, y que no pase del total de contactos)
-		if (!(number > 0 && number <= 8) || number > num_contact)
+		if (!(number > 0 && number <= 8) || static_cast<size_t>(number) > num_contact)
 		{
 			std::cout << "Wrong index" << std::endl;
 			return (0);

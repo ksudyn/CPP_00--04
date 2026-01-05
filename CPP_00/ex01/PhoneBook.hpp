@@ -6,7 +6,7 @@
 /*   By: ksudyn <ksudyn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/09 19:37:11 by ksudyn            #+#    #+#             */
-/*   Updated: 2025/09/05 15:37:52 by ksudyn           ###   ########.fr       */
+/*   Updated: 2026/01/05 15:42:59 by ksudyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@
 #include <string.h>     // std::string
 #include <iomanip>    // setw, right
 #include <limits>     // para limpiar el input buffer
+#include <sstream>
+#include <cstdlib>
+
+
 
 //....Contact....//
 //Representa a una persona en tu agenda.
@@ -37,7 +41,7 @@ class Contact
 		int	 check_num_phone(const char *number);
 		void  print_col(std::string str,  int len_str);
 		void  print_contact(int i);
-		int	 dat_contact(int *num_contact);
+		int	 dat_contact(size_t *num_contact);
 };
 //Los atributos son private porque no deben ser modificados directamente desde fuera.
 //Las funciones públicas son la "interfaz" para interactuar con esos datos.
@@ -48,7 +52,7 @@ class PhoneBook
 	private:
 		Contact contact[8];
 	public:
-		int	num_contact;
+		size_t	num_contact;
 
 		PhoneBook(void);
 		~PhoneBook(void);

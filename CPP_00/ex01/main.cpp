@@ -6,13 +6,13 @@
 /*   By: ksudyn <ksudyn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/09 19:32:56 by ksudyn            #+#    #+#             */
-/*   Updated: 2025/07/11 20:40:06 by ksudyn           ###   ########.fr       */
+/*   Updated: 2026/01/05 15:44:12 by ksudyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-int	main(int argc, char **argv)
+int	main(void)
 {
 	PhoneBook	phone_book;
 	std::string	input;

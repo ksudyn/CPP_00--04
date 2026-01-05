@@ -6,7 +6,7 @@
 /*   By: ksudyn <ksudyn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/19 18:21:39 by ksudyn            #+#    #+#             */
-/*   Updated: 2025/09/29 20:18:49 by ksudyn           ###   ########.fr       */
+/*   Updated: 2026/01/05 16:05:21 by ksudyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static float triangleArea(Point const &p1, Point const &p2, Point const &p3)
     term2 = p2.getX() * (p3.getY() - p1.getY());
     term3 = p3.getX() * (p1.getY() - p2.getY());
 
-    Fixed area = (term1 + term2 + term3);
+    area = (term1 + term2 + term3);
     if (area < Fixed(0))
         area = area * Fixed(-1);
     return (area / Fixed(2)).toFloat();

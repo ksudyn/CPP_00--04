@@ -6,23 +6,23 @@
 #    By: ksudyn <ksudyn@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/18 19:43:09 by ksudyn            #+#    #+#              #
-#    Updated: 2025/09/22 19:22:01 by ksudyn           ###   ########.fr        #
+#    Updated: 2026/01/05 15:30:09 by ksudyn           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = ClavTrap
 
-CC = c++
-CFLAGS = -Wall -Werror -Wextra -std=c++98
+CXX = c++
+CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 
 SOURCES = main.cpp ClapTrap.cpp ScavTrap.cpp
 OBJECTS = $(SOURCES:.cpp=.o)
 
 %.o: %.cpp
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 $(NAME): $(OBJECTS)
-	$(CC) $(CFLAGS) $(OBJECTS) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJECTS) -o $(NAME)
 
 clean:
 	rm -f $(OBJECTS)

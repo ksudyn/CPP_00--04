@@ -6,7 +6,7 @@
 /*   By: ksudyn <ksudyn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 17:40:43 by ksudyn            #+#    #+#             */
-/*   Updated: 2025/09/12 18:11:05 by ksudyn           ###   ########.fr       */
+/*   Updated: 2026/01/05 15:49:12 by ksudyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void Zombie:: announce( void )
 
 Zombie::Zombie( void )
 {
-	this->name = name;
+	this->name = "";
 	std::cout << name << " Zombie Constructor" <<std::endl;
 }
 
