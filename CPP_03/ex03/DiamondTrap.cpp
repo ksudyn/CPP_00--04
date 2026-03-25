@@ -6,7 +6,7 @@
 /*   By: ksudyn <ksudyn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 18:03:00 by ksudyn            #+#    #+#             */
-/*   Updated: 2025/10/01 18:06:32 by ksudyn           ###   ########.fr       */
+/*   Updated: 2026/03/25 02:14:06 by ksudyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,17 @@ DiamondTrap:: DiamondTrap() : ClapTrap() , ScavTrap() , FragTrap()
 
 DiamondTrap::DiamondTrap(std::string name ): ClapTrap(name + "_clap_name"), ScavTrap(name), FragTrap(name)
 {
+    ScavTrap scav;
+    FragTrap frag;
+    
     this->name = name;
-    HitPoints = 100;
-    EnergyPoints = 50;
-    AttackDamage = 30;
+	this->setHitPoints(frag.getHitPoints());
+	this->setEnergyPoints(scav.getEnergyPoints());
+	this->setAttackDamage(frag.getAttackDamage());
+
+    std::cout << "HitPoint de DiamondTrap " << HitPoints << std::endl;
+    std::cout << "EnergyPoint de DiamondTrap " << EnergyPoints << std::endl;
+    std::cout << "AttackDamage de DiamondTrap  " << AttackDamage << std::endl;
 
     std::cout << "DiamondTrap " << this->name << " has been created!" << std::endl;
 }

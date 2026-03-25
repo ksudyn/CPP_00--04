@@ -6,7 +6,7 @@
 /*   By: ksudyn <ksudyn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 18:04:16 by ksudyn            #+#    #+#             */
-/*   Updated: 2025/10/01 18:04:42 by ksudyn           ###   ########.fr       */
+/*   Updated: 2026/03/25 02:11:43 by ksudyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ FragTrap::FragTrap()
 FragTrap::FragTrap(std::string name)
 {
     this->Name = name;
-    HitPoints = 100;
-    EnergyPoints = 100;
-    AttackDamage = 30;
+	this->setHitPoints(100);
+	this->setEnergyPoints(100);
+	this->setAttackDamage(30);
     std::cout << "FragTrap " << Name << " has been created!" << std::endl;
 }
 

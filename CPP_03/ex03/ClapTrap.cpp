@@ -6,7 +6,7 @@
 /*   By: ksudyn <ksudyn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 18:02:19 by ksudyn            #+#    #+#             */
-/*   Updated: 2025/10/01 18:02:45 by ksudyn           ###   ########.fr       */
+/*   Updated: 2026/03/25 02:08:55 by ksudyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,3 +135,42 @@ void ClapTrap::beRepaired(unsigned int amount)
 // Aumenta HitPoints en amount.
 // Solo si tiene vida y energía > 0.
 // Muestra un mensaje
+
+void	ClapTrap::setName(const std::string& name)
+{
+	this->Name = name;
+}
+
+void	ClapTrap::setHitPoints(unsigned int hp)
+{
+	this->HitPoints = hp;
+}
+
+void	ClapTrap::setEnergyPoints(unsigned int energy)
+{
+	this->EnergyPoints = energy;
+}
+
+void	ClapTrap::setAttackDamage(unsigned int damage)
+{
+	this->AttackDamage = damage;
+}
+std::string	ClapTrap::getName() const
+{
+	return (this->Name);
+}
+
+unsigned int	ClapTrap::getHitPoints() const
+{
+	return (this->HitPoints);
+}
+
+unsigned int	ClapTrap::getEnergyPoints() const
+{
+	return (this->EnergyPoints);
+}
+
+unsigned int	ClapTrap::getAttackDamage() const
+{
+	return (this->AttackDamage);
+}

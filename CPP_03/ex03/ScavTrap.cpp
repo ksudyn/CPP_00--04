@@ -6,7 +6,7 @@
 /*   By: ksudyn <ksudyn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 18:04:56 by ksudyn            #+#    #+#             */
-/*   Updated: 2025/10/01 18:05:19 by ksudyn           ###   ########.fr       */
+/*   Updated: 2026/03/25 02:10:22 by ksudyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ ScavTrap::ScavTrap()
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
     // Cambiamos valores por defecto para ScavTrap
-    HitPoints = 100;
-    EnergyPoints = 50;
-    AttackDamage = 20;
+    this->setHitPoints(100);
+	this->setEnergyPoints(50);
+	this->setAttackDamage(20);
     std::cout << "ScavTrap " << Name << " Constructor too" << std::endl;
 }
 
